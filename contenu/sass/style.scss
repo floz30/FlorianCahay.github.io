@@ -1,0 +1,150 @@
+/* TYPOGRAPHIES */
+
+@font-face {
+    font-family: 'gilroylight';
+    src: url('../typographies/gilroy-light-webfont.woff2') format('woff2'),
+         url('../typographies/gilroy-light-webfont.woff') format('woff'),
+         url('../typographies/gilroy-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gilroyextrabold';
+    src: url('../typographies/gilroy-extrabold-webfont.woff2') format('woff2'),
+         url('../typographies/gilroy-extrabold-webfont.woff') format('woff'),
+         url('../typographies/gilroy-extrabold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Helpers */
+
+@mixin translation-2d($x, $y) {
+	-webkit-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+
+/* */
+
+@import "colors";
+@import "header";
+@import "navbar";
+@import "sectionSkills";
+@import "sectionProjects";
+
+* {
+	font-family: "gilroylight";
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'gilroyextrabold';
+	text-transform: uppercase;
+}
+a {
+	&:link, &:visited, &:hover, &:active {
+		text-decoration: none;
+		outline: none;
+	}
+}
+body {
+	position: relative;
+	background-color: whitesmoke;
+	color: $gris-fonce;
+	overflow-x: hidden;
+}
+#skills {
+	min-height: 100vh;
+	h1 {
+		margin: 80px auto 40px auto;
+	}
+}
+#projects {
+	@extend #skills;
+}
+
+/* <<< CONTACT >>> */
+#contact {
+	color: #E5E5E5;
+	min-height: 60vh;
+	position: relative;
+	background-color: #151515;
+	h1 {
+		margin: 80px auto;
+	}
+
+}
+form label {
+	color: #E5E5E5;
+	font-family: "gilroylight";
+}
+.form-group img {
+	width: 100%;
+	min-width: 210px;
+	max-width: 300px;
+}
+.right-part {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.captcha-wrapper {
+	margin: auto;
+}
+
+/* <<< FOOTER >>> */
+footer {
+	background-color: black;
+	padding: 3rem 0rem;
+}
+.footer-icon {
+	margin: 0px 40px;
+	font-size: xx-large;
+	color: white;
+}
+.signature {
+	margin: 20px auto;
+	color: $blanc-casse;
+}
+
+/* <<< TRANSITION >>> */
+
+#transition-1 {
+	background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+				url('../images/ville.jpg') center no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 50vh;
+}
+
+.slideanim {
+	visibility: hidden;
+}
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}

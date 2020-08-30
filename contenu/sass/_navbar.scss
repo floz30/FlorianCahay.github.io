@@ -1,0 +1,30 @@
+/* Barre de navigation */
+.navbar-main {
+	box-shadow: 0 1px 10px rgba(50, 50, 50, 0.4);
+	.navbar-nav .nav-item .nav-link {
+		padding: 1rem;
+	}
+}
+.navbar {
+	.navbar-brand {
+		font-size: 1.35em;
+		color: rgba(0, 0, 0, .8);
+		font-family: "gilroyextrabold";
+	}
+}
+.navbar-collapse {
+	flex-grow: 0;
+}
+.hover-effect-center {
+	&:after {
+		display: block;
+		content: '';
+		border-bottom: 1px solid #333;
+		transform: scaleX(0);
+		transition: transform 250ms ease-in-out;
+	}
+	&:hover:after {
+		transform: scaleX(0.5);
+	}
+}
+/* Fin barre de navigation */
