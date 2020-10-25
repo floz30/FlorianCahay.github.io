@@ -3,17 +3,13 @@
 	max-width: 390px;
 	margin: 0 auto 40px;
 }
-.single-project-image {
-	img {
-		width: 100%;
-		height: 230px;
-	}	
+.single-project a {
+	color: $gris-fonce;
 }
 .single-project-header {
 	border: 2px solid $jaune-pale;
 	max-width: 90%;
 	margin: 0 auto;
-	margin-top: -80px;
 	position: relative;
 }
 .single-project-title {
@@ -35,6 +31,7 @@
 .single-project-details {
 	margin: 24px 15px;
 	p {
+		text-align: justify;
 		color: $gris-clair;
 		line-height: 24px;
 	}

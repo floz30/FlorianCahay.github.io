@@ -9,8 +9,7 @@
   src: url("../typographies/gilroy-extrabold-webfont.woff2") format("woff2"), url("../typographies/gilroy-extrabold-webfont.woff") format("woff"), url("../typographies/gilroy-extrabold-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
-/* Helpers */
-/* */
+
 /* Header */
 #home {
   height: 100vh;
@@ -131,15 +130,13 @@
   max-width: 390px;
   margin: 0 auto 40px; }
 
-.single-project-image img {
-  width: 100%;
-  height: 230px; }
+.single-project a {
+  color: #333; }
 
 .single-project-header {
   border: 2px solid #fdde4b;
   max-width: 90%;
   margin: 0 auto;
-  margin-top: -80px;
   position: relative; }
 
 .single-project-title {
@@ -158,6 +155,7 @@
 .single-project-details {
   margin: 24px 15px; }
   .single-project-details p {
+    text-align: justify;
     color: #7f7c7c;
     line-height: 24px; }
   .single-project-details a {
@@ -191,32 +189,6 @@ body {
   min-height: 100vh; }
   #skills h1, #projects h1 {
     margin: 80px auto 40px auto; }
-
-/* <<< CONTACT >>> */
-#contact {
-  color: #E5E5E5;
-  min-height: 60vh;
-  position: relative;
-  background-color: #151515; }
-  #contact h1 {
-    margin: 80px auto; }
-
-form label {
-  color: #E5E5E5;
-  font-family: "gilroylight"; }
-
-.form-group img {
-  width: 100%;
-  min-width: 210px;
-  max-width: 300px; }
-
-.right-part {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around; }
-
-.captcha-wrapper {
-  margin: auto; }
 
 /* <<< FOOTER >>> */
 footer {
@@ -264,3 +236,5 @@ footer {
   100% {
     opacity: 1;
     -webkit-transform: translateY(0%); } }
+
+/*# sourceMappingURL=style.css.map */

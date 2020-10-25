@@ -62,34 +62,6 @@ body {
 	@extend #skills;
 }
 
-/* <<< CONTACT >>> */
-#contact {
-	color: #E5E5E5;
-	min-height: 60vh;
-	position: relative;
-	background-color: #151515;
-	h1 {
-		margin: 80px auto;
-	}
-
-}
-form label {
-	color: #E5E5E5;
-	font-family: "gilroylight";
-}
-.form-group img {
-	width: 100%;
-	min-width: 210px;
-	max-width: 300px;
-}
-.right-part {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-}
-.captcha-wrapper {
-	margin: auto;
-}
 
 /* <<< FOOTER >>> */
 footer {
