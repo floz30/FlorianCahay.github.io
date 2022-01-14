@@ -1,49 +1,93 @@
 /* Section projets */
-.single-project {
-	max-width: 390px;
-	margin: 0 auto 40px;
-}
-.single-project a {
-	color: $gris-fonce;
-}
-.single-project-header {
-	border: 2px solid $jaune-pale;
-	max-width: 90%;
-	margin: 0 auto;
-	position: relative;
-}
-.single-project-title {
-	background: $jaune-pale;
-	margin: 4px;
-	padding: 33px 0;
-	h4 {
-		text-transform: uppercase;
-		font-size: 1.3rem;
+
+#projects {
+	@extend section;
+	grid-template: 
+		"projects_title"
+		"projects_content";
+
+	.projects-main-title {
+		margin: 80px auto 40px auto;
+		text-align: center;
+		grid-area: projects_title;
 	}
-	h5 {
-		font-size: 1em;
+
+	.btn-group {
+	    display: flex;
+	    justify-content: center;
+	    margin: 40px 0px;
+
+	    button {
+	        border: none;
+	        cursor: pointer;
+	        padding: 10px 20px;
+
+	        &:hover {
+	            background-color: #BEBEBE;
+	        }
+
+	        &:active, &.checked {
+	            background-color: #fdde4b;
+	        }
+
+	        &:first-child {
+	            border-radius: 0.5em 0 0 0.5em;
+	        }
+	        &:last-child {
+	            border-radius: 0 0.5em 0.5em 0;
+	        }
+	        &:focus {
+	            text-decoration: none;
+	            outline: none;
+	        }
+	    }
 	}
-	hr {
-		width: 30%;
-		border-top: 1px black solid;
-	}
-}
-.single-project-details {
-	margin: 24px 15px;
-	p {
-		text-align: justify;
-		color: $gris-clair;
-		line-height: 24px;
-	}
-	a {
-		color: black;
-		opacity: .5;
-		font-size: 14px;
-		margin-top: 8px;
-		&:hover {
-			opacity: 1;
-			font-weight: bold;
+
+	.projects {
+		grid-area: projects_content;
+		margin: 0 auto;
+
+		.project {
+			width: 390px;
+			height: 390px;
+		}
+		.project a {
+			color: $gris-fonce;
+		}
+		.project-background {
+			border: 2px solid $jaune-pale;
+			margin: 0 auto;
+			position: relative;
+			text-align: center;
+		}
+		.project-content {
+			background: $jaune-pale;
+			margin: 4px;
+			padding: 10px 0;
+
+			.project-name {
+				font-size: 1.3rem;
+				margin: 20px 0px 10px 0px;
+				text-transform: none;
+			}
+			.project-date {
+				font-size: 1em;
+				margin: 10px 0px 20px 0px;
+			}
+			hr {
+				width: 30%;
+				border-top: 1px black solid;
+			}
+		}
+		.project-details {
+			margin: 0px 15px;
+			p {
+				text-align: justify;
+				color: $gris-clair;
+				line-height: 24px;
+			}
 		}
 	}
 }
+
 /* Fin projets */

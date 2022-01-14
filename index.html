@@ -5,11 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="author" content="Florian Cahay">
-	<meta name="description" content="Portfolio de Florian Cahay">
+	<meta name="description" content="Présentation de mes projets réalisés">
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="contenu/css/normalize.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css">
-	<link rel="stylesheet" type="text/css" href="contenu/css/style.min.css">
+	<link rel="stylesheet" type="text/css" href="contenu/css/style.css">
 	<link rel="icon" href="contenu/images/logo.png">
 	<title>Florian Cahay - Etudiant en informatique</title>
 </head>
@@ -24,292 +24,215 @@
 			</div>		
 
 			<div class="header-link">
-				<a href="#skills"><i class="fas fa-angle-double-down"></i></a>
+				<a href="#projects"><i class="fas fa-angle-double-down"></i></a>
 			</div>
 		</header>
 
-		<nav class="navbar navbar-expand-sm justify-content-around bg-light navbar-light sticky-top navbar-main">
-			<a class="navbar-brand" href="#main">Florian Cahay</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			
-			
-			<ul class="navbar-nav collapse navbar-collapse" id="mainNavbar">
-			    <li class="nav-item">
-			    	<a class="nav-link hover-effect-center" href="#skills">Compétences</a>
-			    </li>
-			    <li class="nav-item">
-			      	<a class="nav-link hover-effect-center" href="#projects">Réalisations</a>
-			    </li>
-		  	</ul>
-		</nav>
+		<div class="content">
 
-		<!-- compétences -->
+			<section id="projects" class="slideanim">
+				<h1 class="projects-main-title">Réalisations</h1>
 
-		<section id="skills">
-			<div class="container-fluid slideanim">
-				<div class="row text-center">
-					<div class="col">
-						<h1>Compétences</h1>
-					</div>
+				<div id="projects-filters" class="btn-group">
+					<button data-filter="*" class="checked">Tout</button>
+					<button data-filter=".android">Android</button>
+					<button data-filter=".c">C</button>
+					<button data-filter=".java">Java</button>
+					<button data-filter=".python">Python</button>
+					<button data-filter=".web">Web</button>
 				</div>
-				<div class="row skills-row">
-					<div class="col-lg-3 col-md-4 skills-col-title">
-						<h3>Langages</h3>
-					</div>
-					<div class="col-lg-9 col-md-8">
-						<div class="row">
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">HTML 5</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">JAVA</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">CSS 3</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">PYTHON 3</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">C</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">PHP</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">SQL</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">C#</h3>
-							</div>
-						</div>
-					</div>
+
+				<div id="projects-sort" class="btn-group">
+					<button data-sort-value="date" class="checked">Date</button>
+					<button data-sort-value="name">Alphabétique</button>
 				</div>
-				<div class="row skills-row">
-					<div class="col-lg-3 col-md-4 skills-col-title">
-						<h3>Logiciels</h3>
-					</div>
-					<div class="col-lg-9 col-md-8">
-						<div class="row">
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">SUBLIME TEXT</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">VISUAL STUDIO</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">ECLIPSE</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">WAMP</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">MICROSOFT OFFICE</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">LIBRE OFFICE</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">ANDROID STUDIO</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">INTELLIJ</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row skills-row">
-					<div class="col-lg-3 col-md-4 skills-col-title">
-						<h3>SGBD</h3>
-					</div>
-					<div class="col-lg-9 col-md-8">
-						<div class="row">
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">SQL Server</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">PostgreSQL</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">MongoDB</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">MySQL</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row skills-row">
-					<div class="col-lg-3 col-md-4 skills-col-title">
-						<h3>Frameworks</h3>
-					</div>
-					<div class="col-lg-9 col-md-8">
-						<div class="row">
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">BOOTSTRAP</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">ENTITY FRAMEWORK</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">ASP.NET CORE</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row skills-row">
-					<div class="col-lg-3 col-md-4 skills-col-title">
-						<h3>Autre</h3>
-					</div>
-					<div class="col-lg-9 col-md-8">
-						<div class="row">
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">GESTION DE PROJET</h3>
-							</div>
-							<div class="col-lg-3 col-6 skills-col">
-								<h3 class="skills-name">GIT</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
 
-		<section id="transition-1">
-		</section>
+				<div class="projects">
 
-		<!-- projets -->
-		
-		<section id="projects">
-			<div class="container slideanim">
-				<div class="row text-center">
-					<div class="col">
-						<h1>Réalisations</h1>
-					</div>
-				</div>
-				<div class="row">
-
-					<div class="col-xl-4 col-md-6">
-						<div class="single-project">
-							<a href="https://github.com/FlorianCahay/Hanabi" target="_blank">
-								<div class="single-project-header text-center">
-									<div class="single-project-title">
-										<h4>Hanabi | Java</h4>
-										<hr>
-										<h5>11/2019 - 01/2020</h5>
-									</div>
-								</div>
-							</a>
-							<div class="single-project-details">
-								<p>Codage du jeu de société coopératif Hanabi. Les joueurs étant des artificiers, leur but est de s'organiser afin de réaliser un feu d'artifice.</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xl-4 col-md-6">
-						<div class="single-project">
-							<a href="https://github.com/FlorianCahay/Shoot-em-up" target="_blank">
-								<div class="single-project-header text-center">
-									<div class="single-project-title">
-										<h4>Shoot-em-up | C</h4>
-										<hr>
-										<h5>11/2019 - 01/2020</h5>
-									</div>
-								</div>
-							</a>
-							<div class="single-project-details">
-								<p>Jeu d'avion de type Shoot-em-up codé en C avec la librairie graphique libMLV.</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xl-4 col-md-6">
-						<div class="single-project">
-							<a href="https://github.com/FlorianCahay/Snake" target="_blank">
-								<div class="single-project-header text-center">
-									<div class="single-project-title">
-										<h4>Snake | Python</h4>
-										<hr>
-										<h5>05/2019</h5>
-									</div>
-								</div>
-							</a>
-							<div class="single-project-details">
-								<p>Jeu du snake en python avec tkinter comme librairie graphique.</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xl-4 col-md-6">
-						<div class="single-project">
-							<a href="https://github.com/FlorianCahay/Streash" target="_blank">
-								<div class="single-project-header text-center">
-									<div class="single-project-title">
-										<h4>Streash | Java</h4>
-										<hr>
-										<h5>12/2018 - 01/2019</h5>
-									</div>
-								</div>
-							</a>
-							<div class="single-project-details">
-								<p>Interface shell qui permet de manipuler des streams de nombres rationnels.</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xl-4 col-md-6">
-						<div class="single-project">
-							<div class="single-project-header text-center">
-								<div class="single-project-title">
-									<h4>Tour de Londres | Web</h4>
+					<div class="project android">
+						<a href="#" target="_blank">
+							<div class="project-background">
+								<div class="project-content">
+									<h4 class="project-name">HyperStack</h4>
+									<p class="project-tech">Android</p>
 									<hr>
-									<h5>10/2017 - 05/2018</h5>
+									<h5 class="project-date">2022</h5>
 								</div>
 							</div>
-							<div class="single-project-details">
-								<p>Réalisation d'un site web qui présente la Tour de Londres. Ce projet a été réalisé en partenariat avec l'Unesco et ICOMOS.</p>
-							</div>
+						</a>
+						<div class="project-details">
+							<p>Application Android permettant de manipuler une pile de planches interactives, avec des liens hypertextes, qui seront utilisées pour réaliser des transparents de présentation. Plusieurs personnes pourront collaborer en ligne (comme <a href="https://www.google.com/slides/about/" target="_blank">Google Slides</a>).</p>
 						</div>
 					</div>
 
-					<div class="col-xl-4 col-md-6">
-						<div class="single-project">
-							<a href="https://github.com/FlorianCahay/Casse_brique" target="_blank">
-								<div class="single-project-header text-center">
-									<div class="single-project-title">
-										<h4>Casse Brique | Python</h4>
-										<hr>
-										<h5>10/2017 - 12/2017</h5>
-									</div>
+					<div class="project java">
+						<a href="#" target="_blank">
+							<div class="project-background">
+								<div class="project-content">
+									<h4 class="project-name">Reddit</h4>
+									<p class="project-tech">Java</p>
+									<hr>
+									<h5 class="project-date">2022</h5>
 								</div>
-							</a>
-							<div class="single-project-details">
-								<p>Sauvegarde du niveau en cours, création de son propre niveau, mise en place d'un classement en fonction des points obtenus à chaque partie.</p>
 							</div>
+						</a>
+						<div class="project-details">
+							<p>Forum de discussion qui est une version simplifiée de <a href="https://www.reddit.com/" target="_blank">Reddit</a>. Réalisé grâce à Spring.</p>
 						</div>
 					</div>
+
+					<div class="project java">
+						<a href="https://github.com/FlorianCahay/ChatOS" target="_blank">
+							<div class="project-background">
+								<div class="project-content">
+									<h4 class="project-name">ChatOS</h4>
+									<p class="project-tech">Java</p>
+									<hr>
+									<h5 class="project-date">2021</h5>
+								</div>
+							</div>
+						</a>
+						<div class="project-details">
+							<p>ChatOS est un service de discussions qui permet de mettre en relation TCP directe les utilisateurs sans divulguer leur adresse IP.</p>
+						</div>
+					</div>
+
+					<div class="project java">
+						<a href="https://github.com/FlorianCahay/ChatOS" target="_blank">
+							<div class="project-background">
+								<div class="project-content">
+									<h4 class="project-name">LocalKube</h4>
+									<p class="project-tech">Java</p>
+									<hr>
+									<h5 class="project-date">2021</h5>
+								</div>
+							</div>
+						</a>
+						<div class="project-details">
+							<p>LocalKube est une application permettant le déploiement et le contrôle d'applications écrite en Java à l'intérieur de conteneurs docker. </p>
+						</div>
+					</div>
+
+					<div class="project java">
+						<a href="https://github.com/FlorianCahay/Hanabi" target="_blank">
+							<div class="project-background">
+								<div class="project-content">
+									<h4 class="project-name">Hanabi</h4>
+									<p class="project-tech">Java</p>
+									<hr>
+									<h5 class="project-date">2020</h5>
+								</div>
+							</div>
+						</a>
+						<div class="project-details">
+							<p>Codage du jeu de société coopératif Hanabi. Les joueurs étant des artificiers, leur but est de s'organiser afin de réaliser un feu d'artifice.</p>
+						</div>
+					</div>
+
+					<div class="project c">
+						<a href="https://github.com/FlorianCahay/Shoot-em-up" target="_blank">
+							<div class="project-background">
+								<div class="project-content">
+									<h4 class="project-name">Shoot-em-up</h4>
+									<p class="project-tech">C</p>
+									<hr>
+									<h5 class="project-date">2020</h5>
+								</div>
+							</div>
+						</a>
+						<div class="project-details">
+							<p>Jeu d'avion de type Shoot-em-up codé en C avec la librairie graphique libMLV.</p>
+						</div>
+					</div>
+
+					<div class="project python">
+						<a href="https://github.com/FlorianCahay/Snake" target="_blank">
+							<div class="project-background">
+								<div class="project-content">
+									<h4 class="project-name">Snake</h4>
+									<p class="project-tech">Python</p>
+									<hr>
+									<h5 class="project-date">2019</h5>
+								</div>
+							</div>
+						</a>
+						<div class="project-details">
+							<p>Jeu du snake en python avec tkinter comme librairie graphique.</p>
+						</div>
+					</div>
+
+					<div class="project java">
+						<a href="https://github.com/FlorianCahay/Streash" target="_blank">
+							<div class="project-background">
+								<div class="project-content">
+									<h4 class="project-name">Streah</h4>
+									<p class="project-tech">Java</p>
+									<hr>
+									<h5 class="project-date">2019</h5>
+								</div>
+							</div>
+						</a>
+						<div class="project-details">
+							<p>Interface shell qui permet de manipuler des streams de nombres rationnels.</p>
+						</div>
+					</div>
+
+					<div class="project web">
+						<a href="#" target="_blank">
+							<div class="project-background">
+								<div class="project-content">
+									<h4 class="project-name">Tour de Londres</h4>
+									<p class="project-tech">Web</p>
+									<hr>
+									<h5 class="project-date">2018</h5>
+								</div>
+							</div>
+						</a>
+						<div class="project-details">
+							<p>Réalisation d'un site web qui présente la Tour de Londres. Ce projet a été réalisé en partenariat avec l'Unesco et ICOMOS.</p>
+						</div>
+					</div>
+
+					<div class="project python">
+						<a href="#" target="_blank">
+							<div class="project-background">
+								<div class="project-content">
+									<h4 class="project-name">Casse Brique</h4>
+									<p class="project-tech">Python</p>
+									<hr>
+									<h5 class="project-date">2017</h5>
+								</div>
+							</div>
+						</a>
+						<div class="project-details">
+							<p>Sauvegarde du niveau en cours, création de son propre niveau, mise en place d'un classement en fonction des points obtenus à chaque partie.</p>
+						</div>
+					</div>
+
 				</div>
-			</div>
-		</section>
 
-		<footer class="container-fluid">
-			<div class="row justify-content-center text-footer">
+			</section>
+
+		</div>
+
+		<footer>
+			<div>
 				<a href="https://linkedin.com/in/florian-cahay" title="Linkedin" target="_blank" class="footer-icon"><i class="fab fa-linkedin"></i></a>
 				<a href="https://github.com/FlorianCahay" title="Github" target="_blank" class="footer-icon"><i class="fab fa-github"></i></a>
+				<a href="https://gitlab.com/fcahay" title="Gitlab" target="_blank" class="footer-icon"><i class="fab fa-gitlab"></i></a>
 			</div>
-			<div class="row justify-content-center">
-				<p class="signature">&copy; Florian Cahay 2018-2020</p>
+			<div>
+				<p class="signature">&copy; Florian Cahay 2018-2022</p>
 			</div>
 		</footer>
+
 		<a href="#home" class="top_link"><i class="fas fa-angle-double-up"></i></a>
 
 	</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="contenu/js/isotope.pkgd.min.js"></script>
+<script src="contenu/js/fit-columns.js"></script>
 <script src="contenu/js/script.js"></script>
 </body>
 

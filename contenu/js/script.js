@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
 
 	// Smooth scroll
 	$('a[href*="#"]').not('[href="#"]').click(function(event) {
@@ -55,13 +55,11 @@ $(document).ready(function(){
 
 });
 
-// Variables
+// Ecriture automatique
 var pos_1 = 0;
 var pos_2 = 0;
 var txt = "Florian Cahay";
 var txt_2 = "Etudiant en informatique";
-
-// Ecriture automatique
 function typeWriter() {
 	if (pos_1 < txt.length) {
 		document.getElementById("main-title").innerHTML += txt.charAt(pos_1);
@@ -85,7 +83,45 @@ function randomInteger(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// Close navbar after click
-$('.nav-item a').on('click', function() {
-	$('.navbar-toggler').click();
+
+
+// Isotope
+var $projects = $('.projects').isotope({
+	itemSelector: '.project',
+	getSortData: {
+		tech: '.project-tech',
+		name: '.project-name',
+		date: '.project-date parseInt'
+	},
+	sortAscending: {
+		tech: true,
+		name: true,
+		date: false
+	},
+	masonry: {
+		fitWidth: true,
+		gutter: 20
+	},
+	sortBy: "date"
 });
+
+// bind sort button click
+$('#projects-sort').on( 'click', 'button', function() {
+	var sortValue = $(this).attr('data-sort-value');
+	$projects.isotope({ sortBy: sortValue });
+  });
+
+$('#projects-filters').on('click', 'button', function() {
+	var filterValue = $( this ).attr('data-filter');
+	$projects.isotope({ filter: filterValue });
+})
+
+
+// change is-checked class on buttons
+$('.btn-group').each( function( i, buttonGroup ) {
+	var $buttonGroup = $( buttonGroup );
+	$buttonGroup.on( 'click', 'button', function() {
+	  $buttonGroup.find('.checked').removeClass('checked');
+	  $( this ).addClass('checked');
+	});
+  });
